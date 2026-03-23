@@ -1,38 +1,39 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Syne } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
+  weight: ["600", "700", "800"],
 });
 
 export const metadata: Metadata = {
-  title: "ecom-hub | E-commerce Operations at Scale",
+  title: "ecom-hub | We Run 2 Lakh Orders/Month",
   description:
-    "End-to-end e-commerce operations for brands. From the team managing 2 Lakh orders/month. Go live on Amazon, Flipkart, Myntra & 10+ marketplaces in 1 week.",
+    "End-to-end e-commerce operations at scale. Go live on Amazon, Flipkart, Myntra & 10+ marketplaces in 1 week. From the team managing 14,000+ SKUs.",
   keywords: [
-    "e-commerce",
-    "amazon seller",
+    "e-commerce operations",
+    "amazon seller services",
     "flipkart seller",
-    "marketplace management",
-    "inventory management",
-    "e-commerce automation",
-    "online selling",
-    "D2C",
+    "marketplace management india",
+    "inventory automation",
+    "e-commerce agency india",
+    "D2C brand scaling",
     "marketplace onboarding",
   ],
   openGraph: {
-    title: "ecom-hub | E-commerce Operations at Scale",
+    title: "ecom-hub | We Run 2 Lakh Orders/Month",
     description:
-      "End-to-end e-commerce operations for brands. Go live on 10+ marketplaces in 1 week.",
+      "End-to-end e-commerce operations. Go live on 10+ marketplaces in 1 week.",
     url: "https://ecom-hub.in",
     siteName: "ecom-hub",
     locale: "en_IN",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ecom-hub | E-commerce Operations at Scale",
+    title: "ecom-hub | We Run 2 Lakh Orders/Month",
     description:
-      "End-to-end e-commerce operations for brands. Go live on 10+ marketplaces in 1 week.",
+      "End-to-end e-commerce operations. Go live on 10+ marketplaces in 1 week.",
   },
   robots: {
     index: true,
@@ -50,7 +51,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Replace YOUR_PIXEL_ID with your actual Meta Pixel ID from Meta Events Manager
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
 
 export default function RootLayout({
@@ -59,12 +59,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${dmSans.variable} ${syne.variable}`}>
       <head>
-        {/* Meta Pixel Code - Only loads if PIXEL_ID is set */}
         {META_PIXEL_ID && (
           <Script id="facebook-pixel" strategy="afterInteractive">
             {`
@@ -81,8 +77,6 @@ export default function RootLayout({
             `}
           </Script>
         )}
-
-        {/* Microsoft Clarity - Replace YOUR_CLARITY_ID with your actual ID */}
         {process.env.NEXT_PUBLIC_CLARITY_ID && (
           <Script id="microsoft-clarity" strategy="afterInteractive">
             {`
@@ -95,9 +89,8 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-white">
+      <body className="min-h-screen bg-[#050505] text-white antialiased">
         {children}
-        {/* Vercel Analytics - Auto-enabled on Vercel deployment */}
         <Analytics />
       </body>
     </html>
