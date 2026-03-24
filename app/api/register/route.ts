@@ -4,7 +4,7 @@ import { createHash } from "crypto";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXKP7aGD-lox5DAvM5dc_BFt08GIj9wwiXhF_vkZDXcFed0ly2lUHBoRkEQJnFsVQ/exec";
 
 // Meta Conversions API
-const META_PIXEL_ID = process.env.META_PIXEL_ID || "1948156189395176";
+const META_PIXEL_ID = process.env.META_PIXEL_ID || "1494397752035660";
 const META_ACCESS_TOKEN = process.env.META_ACCESS_TOKEN;
 const META_API_VERSION = "v18.0";
 
