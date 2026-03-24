@@ -1,53 +1,39 @@
 import type { Metadata } from "next";
-import { DM_Sans, Syne } from "next/font/google";
+import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import "./globals.css";
 
 const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+  variable: "--font-body",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const dmSerif = DM_Serif_Display({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "ecom-hub | We Run 2 Lakh Orders/Month",
+  title: "ecom-hub | E-commerce Operations at Scale",
   description:
-    "End-to-end e-commerce operations at scale. Go live on Amazon, Flipkart, Myntra & 10+ marketplaces in 1 week. From the team managing 14,000+ SKUs.",
+    "Go live on Amazon, Flipkart, Myntra & 10+ marketplaces in 1 week. Complete onboarding to your first 21 sales for just ₹51.",
   keywords: [
-    "e-commerce operations",
+    "e-commerce services india",
     "amazon seller services",
-    "flipkart seller",
-    "marketplace management india",
-    "inventory automation",
-    "e-commerce agency india",
-    "D2C brand scaling",
-    "marketplace onboarding",
+    "flipkart onboarding",
+    "marketplace management",
+    "e-commerce automation",
   ],
   openGraph: {
-    title: "ecom-hub | We Run 2 Lakh Orders/Month",
-    description:
-      "End-to-end e-commerce operations. Go live on 10+ marketplaces in 1 week.",
+    title: "ecom-hub | E-commerce Operations at Scale",
+    description: "Go live on 10+ marketplaces in 1 week.",
     url: "https://ecom-hub.in",
     siteName: "ecom-hub",
     locale: "en_IN",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ecom-hub | We Run 2 Lakh Orders/Month",
-    description:
-      "End-to-end e-commerce operations. Go live on 10+ marketplaces in 1 week.",
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 };
 
@@ -59,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${syne.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${dmSerif.variable}`}>
       <head>
         {META_PIXEL_ID && (
           <Script id="facebook-pixel" strategy="afterInteractive">
@@ -89,7 +75,7 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className="min-h-screen bg-[#050505] text-white antialiased">
+      <body className="antialiased font-sans bg-white text-gray-900">
         {children}
         <Analytics />
       </body>
