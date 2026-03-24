@@ -208,7 +208,7 @@ export default function Home() {
       <nav className={`nav-container ${scrolled ? "scrolled" : ""}`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="nav-logo flex items-center gap-2">
-            <Image src="/logo.svg" alt="ecom-hub" width={32} height={32} />
+            <Image src="/logo.png" alt="ecom-hub" width={32} height={32} className="rounded" />
             <span>ecom-hub</span>
           </Link>
 
@@ -673,7 +673,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-2">
-                <Image src="/logo.svg" alt="ecom-hub" width={28} height={28} />
+                <Image src="/logo.png" alt="ecom-hub" width={28} height={28} className="rounded" />
                 <span className="text-white font-bold text-xl">ecom-hub</span>
               </div>
               <div className="flex items-center gap-8 text-sm">
