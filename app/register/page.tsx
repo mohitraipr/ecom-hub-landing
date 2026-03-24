@@ -78,6 +78,19 @@ export default function RegisterPage() {
     });
   };
 
+  // Get Facebook cookies for conversion tracking
+  const getFbCookies = () => {
+    const cookies = document.cookie.split(";").reduce((acc, cookie) => {
+      const [key, value] = cookie.trim().split("=");
+      acc[key] = value;
+      return acc;
+    }, {} as Record<string, string>);
+    return {
+      fbc: cookies._fbc || undefined,
+      fbp: cookies._fbp || undefined,
+    };
+  };
+
   const handlePayment = async () => {
     setIsProcessing(true);
 
@@ -88,12 +101,14 @@ export default function RegisterPage() {
       name: "ecom-hub",
       description: "Registration Fee - Onboarding to 21 Sales",
       handler: async function (response: any) {
-        // Payment successful
+        // Payment successful - include FB cookies for conversion tracking
+        const fbCookies = getFbCookies();
         const paymentData = {
           ...formData,
           paymentId: response.razorpay_payment_id,
           amount: 51,
           timestamp: new Date().toISOString(),
+          ...fbCookies,
         };
 
         // Send to Google Sheets via webhook
