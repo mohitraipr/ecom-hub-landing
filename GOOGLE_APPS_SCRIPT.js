@@ -4,10 +4,17 @@
  * After pasting, redeploy as New Version
  */
 
-const SHEET_ID = "YOUR_SHEET_ID_HERE"; // Replace with your actual Sheet ID
-const SHEET_NAME = "Registrations";
+const SHEET_ID = "1Z33nBlt7WVmz9SEnK3uVPjKj8OtDwiYNwoH2VtcP7bI";
+const SHEET_NAME = "ecom-hubRegistrations";
 
 function doGet(e) {
+  // Handle case when e is undefined (direct function call)
+  if (!e || !e.parameter) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "OK", message: "ecom-hub registration endpoint" }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   // Check if this is a data submission
   if (e.parameter.data) {
     try {

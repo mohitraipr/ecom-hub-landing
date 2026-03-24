@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwHGc814sR7o2MwL8Onusn0P2irYyUzcTrVBYOVRfvn0Yl400ze9ZIEvL0Y8SIE5A/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzXKP7aGD-lox5DAvM5dc_BFt08GIj9wwiXhF_vkZDXcFed0ly2lUHBoRkEQJnFsVQ/exec";
 
 interface RegistrationData {
   name: string;

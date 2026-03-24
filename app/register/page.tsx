@@ -158,7 +158,7 @@ export default function RegisterPage() {
             Thank you for registering with ecom-hub. Our team will contact you within 24 hours to begin your onboarding journey.
           </p>
           <a
-            href="https://wa.me/918299256586?text=Hi%2C%20I%20just%20completed%20my%20registration%20for%20ecom-hub"
+            href="https://wa.me/917979026089?text=Hi%2C%20I%20just%20completed%20my%20registration%20for%20ecom-hub"
             target="_blank"
             className="inline-flex items-center gap-2 bg-green-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-green-600 transition-colors"
           >
