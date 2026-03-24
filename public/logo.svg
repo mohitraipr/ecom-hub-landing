@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#4db6ac"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer ring segments -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="url(#gradient)" stroke-width="6" stroke-dasharray="66 20" stroke-linecap="round"/>
+  <!-- Connection dots -->
+  <circle cx="50" cy="8" r="5" fill="#4db6ac"/>
+  <circle cx="92" cy="50" r="5" fill="#3d9990"/>
+  <circle cx="50" cy="92" r="5" fill="#1e3a5f"/>
+  <circle cx="8" cy="50" r="5" fill="#2a4a6f"/>
+  <!-- Letter e -->
+  <text x="50" y="62" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-style="italic" fill="url(#gradient)">e</text>
+</svg>

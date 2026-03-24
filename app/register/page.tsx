@@ -131,7 +131,7 @@ export default function RegisterPage() {
         contact: formData.phone,
       },
       theme: {
-        color: "#2563eb",
+        color: "#f59e0b",
       },
       modal: {
         ondismiss: function () {
@@ -196,7 +196,7 @@ export default function RegisterPage() {
         <header className="border-b border-gray-800 px-6 py-4">
           <div className="max-w-3xl mx-auto flex items-center justify-between">
             <div className="text-xl font-bold text-white">
-              ecom<span className="text-blue-400">-</span>hub
+              ecom<span className="text-amber-500">-</span>hub
             </div>
             <div className="text-sm text-gray-400">
               Step {step} of 5
@@ -211,7 +211,7 @@ export default function RegisterPage() {
               <div
                 key={s}
                 className={`h-2 flex-1 rounded-full transition-colors ${
-                  s <= step ? "bg-blue-500" : "bg-gray-700"
+                  s <= step ? "bg-amber-500" : "bg-gray-700"
                 }`}
               />
             ))}
@@ -233,7 +233,7 @@ export default function RegisterPage() {
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateField("name", e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function RegisterPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateField("phone", e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -255,7 +255,7 @@ export default function RegisterPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateField("email", e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -266,7 +266,7 @@ export default function RegisterPage() {
                     type="text"
                     value={formData.brandName}
                     onChange={(e) => updateField("brandName", e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                     placeholder="Enter your brand name"
                   />
                 </div>
@@ -277,7 +277,7 @@ export default function RegisterPage() {
                     type="text"
                     value={formData.productCategory}
                     onChange={(e) => updateField("productCategory", e.target.value)}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                     placeholder="e.g., Fashion, Electronics, Beauty"
                   />
                 </div>
@@ -297,7 +297,7 @@ export default function RegisterPage() {
                     key={mp.id}
                     className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                       formData.selectedMarketplaces.includes(mp.id)
-                        ? "bg-blue-500/20 border-blue-500"
+                        ? "bg-amber-500/20 border-amber-500"
                         : "bg-gray-800 border-gray-700 hover:border-gray-600"
                     }`}
                   >
@@ -306,7 +306,7 @@ export default function RegisterPage() {
                         type="checkbox"
                         checked={formData.selectedMarketplaces.includes(mp.id)}
                         onChange={() => toggleArrayItem("selectedMarketplaces", mp.id)}
-                        className="w-5 h-5 rounded border-gray-600 text-blue-500 focus:ring-blue-500 focus:ring-offset-0 bg-gray-700"
+                        className="w-5 h-5 rounded border-gray-600 text-amber-500 focus:ring-amber-500 focus:ring-offset-0 bg-gray-700"
                       />
                       <span className="text-white font-medium">{mp.name}</span>
                     </div>
@@ -329,7 +329,7 @@ export default function RegisterPage() {
                     key={service.id}
                     className={`flex items-center gap-3 p-4 rounded-xl border cursor-pointer transition-all ${
                       formData.selectedServices.includes(service.id)
-                        ? "bg-blue-500/20 border-blue-500"
+                        ? "bg-amber-500/20 border-amber-500"
                         : "bg-gray-800 border-gray-700 hover:border-gray-600"
                     }`}
                   >
@@ -337,7 +337,7 @@ export default function RegisterPage() {
                       type="checkbox"
                       checked={formData.selectedServices.includes(service.id)}
                       onChange={() => toggleArrayItem("selectedServices", service.id)}
-                      className="w-5 h-5 rounded border-gray-600 text-blue-500 focus:ring-blue-500 focus:ring-offset-0 bg-gray-700"
+                      className="w-5 h-5 rounded border-gray-600 text-amber-500 focus:ring-amber-500 focus:ring-offset-0 bg-gray-700"
                     />
                     <span className="text-white font-medium">{service.name}</span>
                   </label>
@@ -358,7 +358,7 @@ export default function RegisterPage() {
                     key={doc.id}
                     className={`flex items-center justify-between p-4 rounded-xl border cursor-pointer transition-all ${
                       formData.availableDocuments.includes(doc.id)
-                        ? "bg-blue-500/20 border-blue-500"
+                        ? "bg-amber-500/20 border-amber-500"
                         : "bg-gray-800 border-gray-700 hover:border-gray-600"
                     }`}
                   >
@@ -367,7 +367,7 @@ export default function RegisterPage() {
                         type="checkbox"
                         checked={formData.availableDocuments.includes(doc.id)}
                         onChange={() => toggleArrayItem("availableDocuments", doc.id)}
-                        className="w-5 h-5 rounded border-gray-600 text-blue-500 focus:ring-blue-500 focus:ring-offset-0 bg-gray-700"
+                        className="w-5 h-5 rounded border-gray-600 text-amber-500 focus:ring-amber-500 focus:ring-offset-0 bg-gray-700"
                       />
                       <span className="text-white font-medium">{doc.name}</span>
                     </div>
@@ -383,7 +383,7 @@ export default function RegisterPage() {
                 <textarea
                   value={formData.additionalNotes}
                   onChange={(e) => updateField("additionalNotes", e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 transition-colors"
                   rows={3}
                   placeholder="Any specific requirements or questions?"
                 />
@@ -482,7 +482,7 @@ export default function RegisterPage() {
                 disabled={!canProceed()}
                 className={`flex-1 px-6 py-4 font-semibold rounded-xl transition-colors ${
                   canProceed()
-                    ? "bg-blue-500 hover:bg-blue-600 text-white"
+                    ? "bg-amber-500 hover:bg-amber-600 text-white"
                     : "bg-gray-700 text-gray-500 cursor-not-allowed"
                 }`}
               >
